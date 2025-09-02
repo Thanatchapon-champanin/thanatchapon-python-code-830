@@ -22,7 +22,7 @@ while True:
     choice = input("Enter your choice (1-4): ")
     
     if choice == "1":
-        radius = float(input("Enter radius: "))
+      awawadawsda  radius = float(input("Enter radius: "))
         if radius > 0:
             area = 3.14159 * radius * radius
             print(f"Circle area: {area:.2f}")
