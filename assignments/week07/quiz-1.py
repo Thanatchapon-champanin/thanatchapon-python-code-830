@@ -38,4 +38,3 @@ class Circle:
 my_Circle = Circle(18)
 print(my_Circle.get_area())
 print(my_Circle.get_perimeter())
-.
