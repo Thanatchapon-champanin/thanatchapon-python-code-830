@@ -40,7 +40,7 @@ Example
 
 """
 
-import random
+import random 
 
 def get_parity_hint(number):
     if number % 2 == 0:
@@ -58,8 +58,35 @@ def get_divisibility_hint(number):
 
 def get_range_hint(number, current_min=1, current_max=100):
     # Return narrowed range around the number
-    pass
+    bottom_edge = number -12
+    top_edge = number +12
+    return f"HINT: The narrawed rang aront the number is {range(number -12, number +12)}"
 
 def get_thefirst_digit_hint(number):
     # Retun the first digit of the number
-    pass
+    first_digit = number // 10
+    return f"HINT: The first digit is {first_digit}"
+
+random_number = random.randint(1, 100)
+attemp = 1
+
+while True:
+    number = int(input(f"Attempt :",attemp,"Guess the number(1-100): "))
+    if random_number == number:
+        print(f"Congratulations! You won in ",attemp,"attempts!")
+        break
+    elif random_number > number:
+        print("Too low!")
+    else:
+        print("Too hight!")
+
+    if attemp == 3:
+        get_parity_hint(random_number)
+    elif attemp ==5:
+        get_divisibility_hint(random_number)
+    elif attemp ==7:
+        get_range_hint
+    elif attemp ==10:
+        get_thefirst_digit_hint(random_number)
+
+    attemp = attemp +1
